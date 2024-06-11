@@ -1,0 +1,10 @@
+{% extends 'quotes_by_great_authors/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-3">
+    <h1>Exit</h1>
+    <p>You have successfully logged out.</p>
+    <a href="{% url 'app_auth:signin' %}" class="btn btn-primary">Sign in again</a>
+</div>
+{% endblock %}

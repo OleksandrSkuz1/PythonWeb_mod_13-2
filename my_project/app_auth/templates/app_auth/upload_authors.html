@@ -1,0 +1,15 @@
+{% extends 'quotes_by_great_authors/base.html' %}
+
+{% block content %}
+<div class="container mt-3">
+    <h1>Upload Authors</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="authors_file">Select Authors File</label>
+            <input type="file" class="form-control-file" id="authors_file" name="authors_file">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>
+{% endblock %}

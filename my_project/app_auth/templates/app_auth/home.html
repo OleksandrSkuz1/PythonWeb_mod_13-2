@@ -1,0 +1,23 @@
+{% extends 'quotes_by_great_authors/base.html' %}
+
+{% block content %}
+<div class="container mt-3">
+    <h1>Welcome to Quotes by Great Authors</h1>
+    <h2>Authors</h2>
+    <ul>
+        {% for author in authors %}
+        <li>{{ author.name }}</li>
+        {% empty %}
+        <li>No authors yet.</li>
+        {% endfor %}
+    </ul>
+    <h2>Quotes</h2>
+    <ul>
+        {% for quote in quotes %}
+        <li>"{{ quote.text }}" - {{ quote.author.name }}</li>
+        {% empty %}
+        <li>No quotes yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
