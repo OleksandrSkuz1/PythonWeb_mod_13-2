@@ -11,6 +11,7 @@ setuptools = "^69.5.1"
 django = "^5.0.5"
 pymongo = "^4.7.2"
 python-dateutil = "^2.9.0.post0"
+django-environ = "^0.11.2"
 
 
 [build-system]
